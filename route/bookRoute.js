@@ -18,7 +18,7 @@ router.get('/:id',(req,res)=>{
         
         const book = books.find(book=>book.id === bookID)
         if(!book){
-            return res.status(404).json({error:"Book not avaliable"})
+            return res.status(404).json({error:"Book not found"})
         }
         res.status(200).json(book)
     }catch(error){
